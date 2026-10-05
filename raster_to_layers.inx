@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Raster to Layered Vector</name>
+  <id>org.user.raster_to_layers</id>
+  <param name="src" type="path" mode="file" filetypes="png,jpg,jpeg" gui-text="Image file (leave empty to use the selected image)"/>
+  <param name="python" type="string" gui-text="Python executable">python</param>
+  <param name="colors" type="int" min="2" max="64" gui-text="Number of colors">8</param>
+  <param name="upscale" type="int" min="1" max="4" gui-text="Upscale before tracing">2</param>
+  <param name="speckle" type="int" min="0" max="100" gui-text="Speckle filter (px)">4</param>
+  <param name="corner" type="int" min="0" max="180" gui-text="Corner threshold">60</param>
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu><submenu name="Tracing"/></effects-menu>
+  </effect>
+  <script><command location="inx" interpreter="python">raster_to_layers.py</command></script>
+</inkscape-extension>
