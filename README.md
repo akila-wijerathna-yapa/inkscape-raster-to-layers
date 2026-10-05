@@ -116,4 +116,4 @@ Not tested. The same approach should work: install Python 3.12 and the packages,
 
 ## License
 
-Add a license file (for example MIT) before publishing.
+MIT.
